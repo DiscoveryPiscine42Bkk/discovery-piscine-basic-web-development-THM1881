@@ -1,0 +1,4 @@
+cd ~/discovery_piscine/cell00/ex02
+touch midLS
+nano midLS
+ls -p | grep -v '/$\|^\.' | tr '\n' ','

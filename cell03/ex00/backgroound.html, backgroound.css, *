@@ -1,0 +1,40 @@
+cd ~/discovery_piscine/cell00/ex00
+touch background.html background.css background.js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Background</title>
+    <link rel="stylesheet" href="background.css">
+</head>
+<body>
+    <button id="changeColorBtn">Change Background</button>
+    <script src="background.js"></script>
+</body>
+</html>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    transition: background-color 0.5s ease;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #008CBA;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #005f73;
+}
+document.getElementById("changeColorBtn").addEventListener("click", function() {
+    const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+    document.body.style.backgroundColor = randomColor;
+});
+xdg-open background.html  # Linux
+open background.html      # macOS

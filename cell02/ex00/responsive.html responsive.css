@@ -1,0 +1,38 @@
+
+/* Make the page take full viewport height and width /
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/ Make the table fill the entire viewport /
+table {
+  width: 100vw;
+  height: 100vh;
+  border-collapse: collapse;
+  table-layout: fixed; / Ensures columns shrink evenly /
+}
+
+/ Style table headers and cells /
+th, td {
+  border: 1px solid #333;
+  padding: 8px;
+  text-align: center;
+  word-wrap: break-word; / Wrap long content /
+  overflow-wrap: break-word;
+}
+
+/ Responsive font sizing /
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1vw; / Font size scales with viewport width /
+  min-font-size: 12px; / fallback for very small screens /
+}
+
+/ Optional: Make sure font doesn't get too small on very narrow screens */
+@media (max-width: 600px) {
+  body {
+    font-size: 12px;
+  }
+}

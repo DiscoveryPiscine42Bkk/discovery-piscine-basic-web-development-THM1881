@@ -1,0 +1,59 @@
+cd ~/discovery_piscine/cell00/ex04
+touch basics.html
+nano basics.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basics</title>
+    <style>
+        body {
+            background-color: pink;
+            text-align: center;
+        }
+        h1 {
+            color: white;
+            font-size: 50px;
+        }
+        .shop-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .shop-container img {
+            width: 300px;
+            height: auto;
+        }
+        hr {
+            margin-top: 20px;
+            border: 1px solid black;
+        }
+        .footer {
+            text-align: right;
+            font-style: italic;
+            font-family: monospace;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Basics & More!</h1>
+
+    <div class="shop-container">
+        <a href="https://www.amazon.com">
+            <img src="your-image-url-1.jpg" alt="Online Shop 1">
+        </a>
+        <a href="https://www.ebay.com">
+            <img src="your-image-url-2.jpg" alt="Online Shop 2">
+        </a>
+    </div>
+
+    <hr>
+
+    <div class="footer">
+        © wil 2025
+    </div>
+</body>
+</html>
+xdg-open basics.html  # Linux
+open basics.html      # macOS

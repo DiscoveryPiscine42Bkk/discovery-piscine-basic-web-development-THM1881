@@ -1,0 +1,64 @@
+cd ~/discovery_piscine/cell00/ex01
+touch balloon.html balloon.css balloon.js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exploding Balloon</title>
+    <link rel="stylesheet" href="balloon.css">
+</head>
+<body>
+    <div id="balloon"></div>
+    <script src="balloon.js"></script>
+</body>
+</html>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: lightgray;
+}
+
+#balloon {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+const balloon = document.getElementById("balloon");
+let size = 200;
+const colors = ["red", "green", "blue"];
+let colorIndex = 0;
+
+balloon.addEventListener("click", () => {
+    size += 10;
+    balloon.style.width = size + "px";
+    balloon.style.height = size + "px";
+    
+    colorIndex = (colorIndex + 1) % colors.length;
+    balloon.style.backgroundColor = colors[colorIndex];
+
+    if (size > 420) {
+        size = 200; 
+        balloon.style.width = "200px";
+        balloon.style.height = "200px";
+        balloon.style.backgroundColor = "red";
+        colorIndex = 0;
+    }
+});
+
+balloon.addEventListener("mouseleave", () => {
+    if (size > 200) {
+        size -= 5;
+        balloon.style.width = size + "px";
+        balloon.style.height = size + "px";
+        
+        colorIndex = (colorIndex - 1 + colors.length) % colors.length;
+        balloon.style.backgroundColor = colors[colorIndex];
+    }
+});
+xdg-open balloon.html  # Linux
+open balloon.html      # macOS

@@ -2,4 +2,3 @@ cd ~/discovery_piscine/cell00/ex01
 echo "Z" > z
 chmod 644 z
 cat z
-

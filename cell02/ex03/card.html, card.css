@@ -1,0 +1,83 @@
+/* Profile card container /
+.profile-card {
+  background: #fff;
+  width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  padding: 24px 20px 32px;
+  text-align: center;
+}
+
+/ Title on top /
+.card-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/ Invisible table /
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/ Remove table borders /
+.info-table,
+.info-table td {
+  border: none;
+}
+
+/ Profile picture /
+.profile-pic-cell {
+  padding-bottom: 16px;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e63946;
+}
+
+/ Login /
+.login-cell {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+  padding-bottom: 8px;
+}
+
+/ Description /
+.description-cell {
+  font-size: 1rem;
+  color: #666;
+  padding-bottom: 20px;
+  font-style: italic;
+}
+
+/ Social networks container /
+.social-cell {
+  padding-bottom: 24px;
+}
+
+/ Social links styling /
+.social-link {
+  display: inline-block;
+  margin: 0 8px;
+  transition: transform 0.2s ease;
+}
+
+.social-link img {
+  width: 24px;
+  height: 24px;
+}
+
+/ Hover effect on social icons /
+.social-link:hover,
+.social-link:focus {
+  transform: scale(1.2);
+  outline: none;
+}

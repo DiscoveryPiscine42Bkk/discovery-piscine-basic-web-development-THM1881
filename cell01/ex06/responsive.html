@@ -1,0 +1,55 @@
+cd ~/discovery_piscine/cell00/ex06
+touch responsive.html
+nano responsive.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Table</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: lightgray;
+        }
+        table {
+            width: 90%;
+            max-width: 100%;
+            height: 80%;
+            border-collapse: collapse;
+        }
+        td {
+            text-align: center;
+            font-size: 2vw;
+            font-weight: bold;
+            color: white;
+            padding: 10px;
+        }
+        .box1 {
+            background-color: blue;
+        }
+        .box2 {
+            background-color: red;
+        }
+        @media (max-width: 600px) {
+            td {
+                font-size: 4vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td class="box1">First Box - Blue</td>
+            <td class="box2">Second Box - Red</td>
+        </tr>
+    </table>
+</body>
+</html>
+xdg-open responsive.html  # Linux
+open responsive.html      # macOS
